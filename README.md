@@ -1,2 +1,2 @@
 # DefenderATP
-good stuff :) related to Microsoft defender advanced threat protection
+good stuff :) related to cybersecurity testing tools and technical resources
