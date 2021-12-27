@@ -7,4 +7,5 @@ Add-Type -TypeDefinition ([IO.File]::ReadAllText("$pwd\Source.cs")) -OutputAssem
 
 
 #detect powershell using sysmon and wazuh
+
 Sysmon64.exe -accepteula -i sysconfig.xml
