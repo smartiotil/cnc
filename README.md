@@ -1,3 +1,4 @@
+for education purpose only!
 
 #Bypass Defender AV AMSI.dll
 
