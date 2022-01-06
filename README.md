@@ -12,5 +12,5 @@ Sysmon64.exe -accepteula -i sysconfig.xml
 
 Snort command line:
 
-#analyze pcap with snort
+analyze pcap with snort
 snort -c /usr/local/etc/snort/snort.lua -r /home/sysadmin/pcap/http_powershell_empire.pcap -Acmg -k none -q # check packets processing by snort.
