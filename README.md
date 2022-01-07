@@ -18,7 +18,7 @@ snort -c /usr/local/etc/snort/snort.lua -r /home/sysadmin/pcap/http_powershell_e
 
 ![image](https://user-images.githubusercontent.com/92370823/148438040-ae3a9a3f-17fe-4987-83e4-d44f7ae87e39.png)
 
-#our snort3 rule that detect powerhellempire cnc malware
+#our snort3 rule, detect powerhellempire cnc malware connection.
 
 alert http (
         msg:"PowerShellEmpire was detected";
