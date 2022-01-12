@@ -63,3 +63,6 @@ snort -c /usr/local/etc/snort/snort.lua -r /home/sysadmin/pcap/http_powershell_e
 ![image](https://user-images.githubusercontent.com/92370823/148611213-23ffb093-cd89-447e-ae07-c61640ae1a48.png)
 
 
+you can read more about it on https://smartiot.co.il
+
+
