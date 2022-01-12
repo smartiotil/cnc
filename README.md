@@ -6,7 +6,7 @@ Add-Type -TypeDefinition ([IO.File]::ReadAllText("$pwd\Source.cs")) -OutputAssem
 [Reflection.Assembly]::Load([IO.File]::ReadAllBytes("$pwd\\Source.dll"))
 [BP.AMS]::Disable()
 
-#If the AV blocks the source.dll file , you need only need to add comment like // to your source.cs, its will bypass AV signature check. 
+#If your AV blocks the source.dll file , you only need to add comment like // to your source.cs, its will bypass AV signatures test. 
 
 
 #detect powershell process using sysmon and wazuh
