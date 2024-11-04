@@ -1,25 +1,33 @@
-For Educational Purposes Only
-Bypass AV AMSI.dll
+ 🚨 For Educational Purposes Only
 
+---
+
+### 🛡️ Bypass AV AMSI.dll
+
+```powershell
 Add-Type -TypeDefinition ([IO.File]::ReadAllText("$pwd\Source.cs")) -OutputAssembly "Source.dll"
-[Reflection.Assembly]::Load([IO.File]::ReadAllBytes("$pwd\\Source.dll"))
+[Reflection.Assembly]::Load([IO.File]::ReadAllBytes("$pwd\Source.dll"))
 [BP.AMS]::Disable()
 
 Note: If your antivirus software blocks the Source.dll file, simply add a comment (e.g., //) in Source.cs to bypass antivirus signature detection.
 
-Detecting PowerShell Processes with Sysmon and Wazuh
-To monitor PowerShell processes using Sysmon:
+🕵️ Detecting PowerShell Processes with Sysmon and Wazuh
+Use Sysmon to monitor PowerShell processes with this command:
+powershell
+
 Sysmon64.exe -accepteula -i sysconfig.xml
 
-Detect PowerShell Empire Using Snort
+
+🔍 Detecting PowerShell Empire Using Snort
 Analyze a pcap file with Snort to detect PowerShell Empire activity:
+bash
 
 snort -c /usr/local/etc/snort/snort.lua -r http_powershell_empire.pcap -Acmg -k none -q
 
-This command processes packets with Snort.
+This command processes packets with Snort, providing visibility into potentially malicious activity.
 
-Snort Rule for Detecting PowerShell Empire C&C Malware
-Here’s a sample Snort rule to detect PowerShell Empire C&C connections:
+📜 Snort Rule for Detecting PowerShell Empire C&C Malware
+Use this sample Snort rule to detect PowerShell Empire command-and-control (C&C) connections:
 snort
 
 alert http (
@@ -37,8 +45,11 @@ alert http (
     sid:56465; rev:5;
 )
 
-Snort 3 HTTP Buffers
-Snort 3 provides several HTTP inspection buffers, including:
+
+📂 Snort 3 HTTP Buffers
+Snort 3 
+provides several HTTP inspection buffers to analyze various HTTP traffic
+ elements. Some of the available buffers include:
 http_inspect::http_client_body
 http_inspect::http_cookie
 http_inspect::http_header
@@ -52,9 +63,11 @@ http_inspect::http_stat_code
 http_inspect::http_uri
 http_inspect::js_data
 http_inspect::vba_data
+Run Snort for analysis again:
+bash
+
+snort -c /usr/local/etc/snort/snort.lua -r http_powershell_empire.pcap -Acmg
 
 
-snort -c /usr/local/etc/snort/snort.lua -r ttp_powershell_empire.pcap -Acmg
-
-
-For further reading, visit https://Livehack101.com.
+📚 Further Reading
+For more resources, articles, and tools on cybersecurity, visit https://Livehack101.com
