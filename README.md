@@ -1,5 +1,5 @@
 For Educational Purposes Only
-Bypass Defender AV AMSI.dll
+Bypass AV AMSI.dll
 
 Add-Type -TypeDefinition ([IO.File]::ReadAllText("$pwd\Source.cs")) -OutputAssembly "Source.dll"
 [Reflection.Assembly]::Load([IO.File]::ReadAllBytes("$pwd\\Source.dll"))
@@ -13,9 +13,8 @@ Sysmon64.exe -accepteula -i sysconfig.xml
 
 Detect PowerShell Empire Using Snort
 Analyze a pcap file with Snort to detect PowerShell Empire activity:
-bash
 
-snort -c /usr/local/etc/snort/snort.lua -r /home/sysadmin/pcap/http_powershell_empire.pcap -Acmg -k none -q
+snort -c /usr/local/etc/snort/snort.lua -r http_powershell_empire.pcap -Acmg -k none -q
 
 This command processes packets with Snort.
 
@@ -53,10 +52,9 @@ http_inspect::http_stat_code
 http_inspect::http_uri
 http_inspect::js_data
 http_inspect::vba_data
-Run Snort to analyze again:
 
 
-snort -c /usr/local/etc/snort/snort.lua -r /home/sysadmin/pcap/http_powershell_empire.pcap -Acmg
+snort -c /usr/local/etc/snort/snort.lua -r ttp_powershell_empire.pcap -Acmg
 
 
 For further reading, visit https://Livehack101.com.
